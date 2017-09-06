@@ -1,0 +1,43 @@
+# -*- coding: utf-8 -*-
+# Exercícios by Nick Parlante (CodingBat)
+
+# H. squirrel_play
+# os esquilos na FIT brincam quando a temperatura está entre 60 e 90
+# graus Fahreneit (são estrangeiros e o termômetro é diferente rs)
+# A menos que seja verão, então a temperatura limite é 100 ao invés de 90
+# retorne True caso os esquilos brinquem
+# squirrel_play(70, False) -> True
+# squirrel_play(95, False) -> False
+# squirrel_play(95, True) -> True
+def squirrel_play(temp, is_summer):
+  if (is_summer==true):
+    if(temp>=60 and temp<=100):
+      return true
+    else:
+      return false
+  if(is_summer==false):
+    if(temp>=60 and temp<=90):
+      return true
+    else:
+      return false
+#se é verão, e a temperatura está entre 60 até 100 graus então o return é true, se não estiver nesse intervalo o return é false
+#se não é verão, e a temperatura está entre 60 até 90 graus então o return é true, se não estiver nesse intervalo o return é false	
+	
+
+ 
+
+def test_ex08():
+  print ('squirrel_play')
+  assert squirrel_play(70, False) == True
+  assert squirrel_play(95, False) == False
+  assert squirrel_play(95, True) == True
+  assert squirrel_play(90, False) == True
+  assert squirrel_play(90, True) == True
+  assert squirrel_play(50, False) == False
+  assert squirrel_play(50, True) == False
+  assert squirrel_play(100, False) == False
+  assert squirrel_play(100, True) == True
+  assert squirrel_play(105, True) == False
+  assert squirrel_play(59, False) == False
+  assert squirrel_play(59, True) == False	
+  assert squirrel_play(60, False) == True
