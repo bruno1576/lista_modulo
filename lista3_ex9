@@ -1,0 +1,56 @@
+# I. pego_correndo
+# você foi pego correndo
+# o resultado será:
+# sem multa = 0
+# multa média = 1
+# multa grave = 2
+# velocide <= 60 sem multa
+# velocidade entre 61 e 80 multa média
+# velocidade maior que 81 multa grave (cidade do interior)
+# caso seja seu aniversário a velocidade pode ser 5 km/h maior em todos os casos
+# pego_correndo(60, False) -> 0
+# pego_correndo(65, False) -> 1
+# pego_correndo(65, True) -> 0 
+def pego_correndo(speed, is_birthday):
+    if (is_birthday==true):
+	speed=speed+5
+    if (speed<=60):
+	return 0
+    elif (speed>60 and speed<=80):
+	return 1
+    else:
+	return 2
+		
+# se for seu aniversário entao a variavel speed recebe ela mesmo e mais 5
+# se sua velocidade for menor ou igual a 60 return é 0
+# se sua velocidade for maior que 60 return é 1
+# senão, o return é 2
+
+ 
+def test_ex09():
+  print ('Pego correndo')
+  assert pego_correndo(60, False) == 0
+  assert pego_correndo(65, False) == 1
+  assert pego_correndo(65, True) == 0
+  assert pego_correndo(80, False) == 1
+  assert pego_correndo(85, False) == 2
+  assert pego_correndo(85, True) == 1
+  assert pego_correndo(70, False) == 1
+  assert pego_correndo(75, False) == 1
+  assert pego_correndo(75, True) == 1
+  assert pego_correndo(40, False) == 0
+  assert pego_correndo(40, True) == 0
+  assert pego_correndo(90, False) == 2
+
+def test_ex02():
+  print ('String Explosion')
+  assert string_splosion('Code') == 'CCoCodCode'
+  assert string_splosion('abc') == 'aababc'
+  assert string_splosion('ab') == 'aab'
+  assert string_splosion('x') == 'x'
+  assert string_splosion('fade') == 'ffafadfade'
+  assert string_splosion('There') == 'TThTheTherThere'
+  assert string_splosion('Kitten') == 'KKiKitKittKitteKitten'
+  assert string_splosion('Bye') == 'BByBye'
+  assert string_splosion('Good') == 'GGoGooGood'
+  assert string_splosion('Bad') == 'BBaBad'
