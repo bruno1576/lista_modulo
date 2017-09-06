@@ -8,20 +8,22 @@
 # maior_ponta([1, 2, 3]) -> [3, 3, 3]
 # maior_ponta([1, 3, 2]) -> [2, 2, 2]
 def maior_ponta(nums):
-  contador=1
+    maiordeles = 0
+    vetorfinal = []
+
+    if nums[0] > nums[-1]:
+        maiordeles = nums[0]
+    else:
+        maiordeles = nums[-1]
+
+    vetorfinal = [maiordeles,maiordeles,maiordeles]
+    return vetorfinal
   
-  maiornumero=maior_ponta[0]
-  while contador<=2:
-	if (nums[contador]>maiornumero):
-		maiornumero=nums[contador]
-	contador=contador+1
-  
-  listanova=[maior,maior,maior]
-  return listanova
-  
-# eu crio uma variável chamada maiornumero e armazeno o primeiro número do vetor nums
-# crio uma estrutura de repetição onde irá percorrer o vetor nums e irá comparar e armazenar o maior valor na variável maior
-# depois eu crio o vetor listanova e coloca tres vezes o valor do maior número nele e no return eu coloco essa lsita
+# eu crio uma variável chamada maiordeles valendo zero e um vetor chamado vetorfinal vazio, se o primeiro
+# elemento do vetor for maior que o último elemento do vetor então maiordeles recebe o primeiro elemento
+# senão maiordeles recebe o último elemento
+# depois eu mando o vetorfinal receber em suas 3 posições a variavel maiordeles e mando retornar o vetorfinal
+
 	
 
 def test_ex04():
