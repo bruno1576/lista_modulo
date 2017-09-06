@@ -10,18 +10,15 @@
 # squirrel_play(95, False) -> False
 # squirrel_play(95, True) -> True
 def squirrel_play(temp, is_summer):
-  if (is_summer==true):
-    if(temp>=60 and temp<=100):
-      return true
-    else:
-      return false
-  if(is_summer==false):
-    if(temp>=60 and temp<=90):
-      return true
-    else:
-      return false
-#se é verão, e a temperatura está entre 60 até 100 graus então o return é true, se não estiver nesse intervalo o return é false
-#se não é verão, e a temperatura está entre 60 até 90 graus então o return é true, se não estiver nesse intervalo o return é false	
+    testaverao = 10 if is_summer else 0
+    if (temp >= 60) and (temp <= 90 + testaverao):
+        return True
+    return False
+#a variavel testaverao recebe 10 se is_summer é true, senao recebe 0
+# se a temperatura for maior ou igual a 60 e a temperatura for menor a 90 somado com o valor de testaverao
+# (que pode ser 10 ou 0)
+# entao o retorno é true
+# senao o retorno é false	
 	
 
  
