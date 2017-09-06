@@ -9,13 +9,18 @@
 # middle_way([7, 7, 7], [3, 8, 0]) -> [7, 8]
 # middle_way([5, 2, 9], [1, 4, 5]) -> [2, 4]
 def middle_way(a, b):
-  um = (a[len(a)/2)
-  dois = (b[len(b)/2]])
-  return um,dois
+  listanova=[]
+  primeira=a[1]
+  segunda=b[1]
+  listanova=[primeira,segunda]
+  return listanova
 
-# a variavel um pega o elemento do meio da lista a
-# a variavel dois pega o elemento do meio da lista b
-# é mostrado ao usuario o valor da variavel um e da variavel dois
+#Como cada lista tem 3 elementos, a ideia é pegar o segundo de cada(a posição 1)
+# a primeira lista eu peguei o segundo elemento e guardei na variável primeira
+#a segunda lista eu peguei o segundo elemento e guardei na variável segunda
+#depois eu criei um vetor chamado listanova e coloquei as duas variáveis como elementos e mandei retornar 
+#esse vetor
+
 
 
 def test_ex06():
