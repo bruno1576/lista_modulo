@@ -12,18 +12,19 @@
 # pego_correndo(65, False) -> 1
 # pego_correndo(65, True) -> 0 
 def pego_correndo(speed, is_birthday):
-    if (is_birthday==true):
-	speed=speed+5
-    if (speed<=60):
-	return 0
-    elif (speed>60 and speed<=80):
-	return 1
+    verificaaniversario = 5 if is_birthday else 0
+
+    if (speed <= 60 + verificaaniversario):
+        return 0
+    elif (speed > 60 + verificaaniversario) and (speed <= 80 + verificaaniversario):
+        return 1
     else:
-	return 2
+        return 2
 		
-# se for seu aniversário entao a variavel speed recebe ela mesmo e mais 5
-# se sua velocidade for menor ou igual a 60 return é 0
-# se sua velocidade for maior que 60 return é 1
+# a variavel verificaaniversario recebe 5 se for true o aniversario, senao recebe zero
+# a variavel verificaaniversario será somada a sua velocidade e se 
+# sua velocidade for menor ou igual a 60 return é 0
+# a variavel verificaaniversario será somada a sua velocidade e se sua velocidade for maior que 60 o return é 1
 # senão, o return é 2
 
  
@@ -42,15 +43,3 @@ def test_ex09():
   assert pego_correndo(40, True) == 0
   assert pego_correndo(90, False) == 2
 
-def test_ex02():
-  print ('String Explosion')
-  assert string_splosion('Code') == 'CCoCodCode'
-  assert string_splosion('abc') == 'aababc'
-  assert string_splosion('ab') == 'aab'
-  assert string_splosion('x') == 'x'
-  assert string_splosion('fade') == 'ffafadfade'
-  assert string_splosion('There') == 'TThTheTherThere'
-  assert string_splosion('Kitten') == 'KKiKitKittKitteKitten'
-  assert string_splosion('Bye') == 'BByBye'
-  assert string_splosion('Good') == 'GGoGooGood'
-  assert string_splosion('Bad') == 'BBaBad'
